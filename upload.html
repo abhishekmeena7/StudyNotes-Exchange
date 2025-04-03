@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Notes</title>
+    <link rel="stylesheet" href="upload.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Upload Your Notes</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="upload.html">Upload</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <section class="upload-section">
+            <h2>Submit Your Notes</h2>
+            <p>Upload your study materials to help others.</p>
+            <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" rows="4" required></textarea>
+                
+                <label for="file">Upload File:</label>
+                <input type="file" id="file" name="file" required>
+                
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <p>&copy; 2025 Digital Study Materials & Notes Exchange. All rights reserved.</p>
+    </footer>
+</body>
+</html>

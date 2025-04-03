@@ -1,0 +1,184 @@
+/* Updated CSS with 4 Notes Per Row and Responsive Image Fit */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+header:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+header .search-container {
+    width: 33.333%;
+    max-width: 500px;
+    min-width: 200px;
+}
+
+header .space-x-4 button {
+    padding: 0.5rem 1.2rem;
+    border-radius: 9999px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+header .space-x-4 button:hover {
+    transform: scale(1.05);
+}
+header .flex.items-center.space-x-2 i {
+    font-size: 2rem; /* Increased icon size */
+    color: #2563eb;
+}
+
+header .flex.items-center.space-x-2 span {
+    font-size: 2rem; /* Increased heading size */
+    font-weight: 700;
+    color: #374151;
+}
+
+/* Notes Grid Styling (Now 4 Notes Per Row) */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+@media (max-width: 1024px) {
+    .notes-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .notes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .notes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.note-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s;
+    position: relative;
+}
+
+.note-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.note-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.note-card h3, .note-card p {
+    padding: 1rem;
+    color: #374151;
+}
+
+.note-card .download-btn {
+    display: block;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.note-card .download-btn:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+}
+
+/* Summarization Container Styles */
+.summarization-container {
+    max-width: 800px;
+    margin: 20px auto; /* Align to the left */
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.summarization-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.summarization-container textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.summarization-container textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25);
+}
+
+.summarization-container button {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.summarization-container button:hover {
+    background-color: #2563eb;
+}
+
+.summarization-container #summaryOutput {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
